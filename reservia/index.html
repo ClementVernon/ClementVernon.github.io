@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="fr"><!-- En-tête de la page -->
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Balise Canonical -->
+    <link rel="canonical" href="#">
+    <!-- Balise Descriptive -->
+    <title>Reservia</title>
+    <meta name="description" content="Reservia, trouvez votre hebergement pour des vacances de rêve.">
+    <meta name="author" content="Clément Vernon">
+    <!-- Balise de partages Réseaux sociaux --> 
+      <!-- Open Graph --> 
+    <meta property="og:title" content="Reservia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="URL de la page d'accueil">
+    <meta property="og:description" content="Reservia, trouvez votre hebergement pour des vacances de rêve.">
+    <meta property="og:image" content="image.png">
+      <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@reservia">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logo/favicon.png">
+    <!-- Feuille de style CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 1023px)" href="css/styles-petit-ecran.css">
+    <link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1439px)" href="css/styles-moyen-ecran.css">
+    <!-- Font Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e4fbeb8ae2.js" crossorigin="anonymous"></script>
+  </head>
+<!-- Corps de la page -->
+  <body>
+    <div id="conteneur">
+
+      <!-- Section: Menu -->
+      <header class="header">
+        <!-- Section: Menu : Logo -->
+        <img class="headerImage" src="./images/logo/reservia.svg" alt="Logo de l'agence de voyage Réservia">
+        <!-- Section: Menu : Navigation -->
+        <nav class="headerNavigation" id="headerNavigation">
+          <a class="headerLien" href="#PropositionHebergement">Hébergement</a>
+          <a class="headerLienInactif" href="#PropositionActivites">Activités</a>
+        </nav>
+        <!-- Section: Menu : Inscription -->
+        <a class="headerInscription" href="#inscription">S'inscrire</a>
+      </header>
+
+      <!-- Section: Contenu -->
+      <main>
+
+        <!-- Section: Rechercher un hébergement -->
+        <section class="RechercheHerbergement">
+
+          <!-- Section: rechercher un hébergement : Titre -->
+          <div class="RechercheHerbergementTitre">
+            <h1 class="RechercheHerbergementTitreH1">Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre de ville ou en pleine nature</p>
+          </div>
+          <!-- Section: rechercher un hébergement : Barre de recherche -->
+          <div class="RechercheHerbergementBarre">
+            <div class="RechercheHerbergementBarreIcon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+            <input class="RechercheHerbergementBarreText" type="search" placeholder="Marseille, France">
+            <button class="RechercheHerbergementBarreButton">
+              <span class="RechercheHerbergementBarreRecherche">Rechercher</span>
+              <i class="iconSearch fas fa-search"></i>
+            </button>
+          </div>
+          <!-- Section: rechercher un hébergement : Filtres -->
+          <div class="RechercheHerbergementFiltres">
+            <div class="RechercheHerbergementFiltresT">
+              <div class="RechercheHerbergementFiltresTitre">
+                <p>Filtres</p>
+              </div>
+            </div>
+            <div class="RechercheHerbergementFiltresE">
+              <a href="">
+                <div class="RechercheHerbergementFiltresElement">
+                  <div class="RechercheHerbergementFiltresIcon">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                  </div>
+                  <div class="RechercheHerbergementFiltresFiltre">
+                    <p>Économique</p>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="RechercheHerbergementFiltresElement">
+                  <div class="RechercheHerbergementFiltresIcon">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                  </div>
+                  <div class="RechercheHerbergementFiltresFiltre">
+                    <p>Familial</p>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="RechercheHerbergementFiltresElement">
+                  <div class="RechercheHerbergementFiltresIcon">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </div>
+                  <div class="RechercheHerbergementFiltresFiltre">
+                    <p>Romantique</p>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="RechercheHerbergementFiltresElement">
+                  <div class="RechercheHerbergementFiltresIcon">
+                    <i class="fa fa-dog" aria-hidden="true"></i>
+                  </div>
+                  <div class="RechercheHerbergementFiltresFiltre">
+                    <p>Animaux autorisés</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Section: rechercher un hébergement : Info nombres hébergement -->
+          <div class="RechercheHerbergementInfos">
+            <div class="RechercheHerbergementInfosIcon">
+              <i class="fas fa-info"></i>
+            </div>
+            <p class="RechercheHerbergementInfosText">Plus de 500 logements sont disponibles dans cette ville</p>
+          </div>
+        </section>
+
+        <!-- Section: Proposition d'hébergement -->
+        <section class="PropositionHebergement" id="PropositionHebergement">
+
+          <!-- Section: Proposition d'hébergement : Caroussel d'hébergement populaire -->
+          <div class="PropositionHebergementPopulaire">
+            <div class="PropositionHebergementPopulaireTexte">
+              <h2>Les plus populaire</h2>
+              <a href="">
+                <i class="fas fa-chart-line"></i>
+              </a>
+            </div>
+            <!-- Section: proposition d'hébergement : caroussel d'hébergement populaire : Fiche 1 -->
+            <article class="PropositionHebergementRecommandeFicheP">
+              <a href="#" class="PropositionHebergementRecommandeFicheLienP">
+                <div class="PropositionHebergementRecommandeFicheImgP">
+                  <img class="PropositionHebergementRecommandeFicheImgImageP" src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                </div>
+                <div class="PropositionHebergementRecommandeFicheInfosP">
+                  <h3 class="PropositionHebergementRecommandeFicheInfosPTitle">Hôtel Le soleil du matin</h3>
+                  <p class="PropositionHebergementRecommandeFicheInfosPPrix">Nuit à partir de <strong>128€</strong></p>
+                  <div class="PropositionHebergementRecommandeFicheInfosPNote">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <!-- Section: proposition d'hébergement : caroussel d'hébergement populaire : Fiche 2 -->
+            <article class="PropositionHebergementRecommandeFicheP">
+              <a href="#" class="PropositionHebergementRecommandeFicheLienP">
+                <div class="PropositionHebergementRecommandeFicheImgP">
+                  <img class="PropositionHebergementRecommandeFicheImgImageP" src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                </div>
+                <div class="PropositionHebergementRecommandeFicheInfosP">
+                  <h3 class="PropositionHebergementRecommandeFicheInfosPTitle">Au coeur de l'eau Chambres d'hôtes</h3>
+                  <p class="PropositionHebergementRecommandeFicheInfosPPrix">Nuit à partir de <strong>71€</strong></p>
+                  <div class="PropositionHebergementRecommandeFicheInfosPNote">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="etoilegrise fas fa-star"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <!-- Section: proposition d'hébergement : caroussel d'hébergement populaire : Fiche 3 -->
+            <article class="PropositionHebergementRecommandeFicheP">
+              <a href="#" class="PropositionHebergementRecommandeFicheLienP">
+                <div class="PropositionHebergementRecommandeFicheImgP">
+                  <img class="PropositionHebergementRecommandeFicheImgImageP" src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                </div>
+                <div class="PropositionHebergementRecommandeFicheInfosP">
+                  <h3 class="PropositionHebergementRecommandeFicheInfosPTitle">Hôtel Tout bleu et Blanc</h3>
+                  <p class="PropositionHebergementRecommandeFicheInfosPPrix">Nuit à partir de <strong>68€</strong></p>
+                  <div class="PropositionHebergementRecommandeFicheInfosPNote">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="etoilegrise fas fa-star"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- Section: Proposition d'hébergement : Caroussel d'hébergement à Marseille -->
+          <div class="PropositionHebergementRecommande">
+            <div class="PropositionHebergementRecommandeT">
+              <h2>Hébergement à Marseille</h2>
+            </div>
+            <div class="PropositionHebergementRecommandeF">
+              <!-- Section: proposition d'hébergement : caroussel d'hébergement à Marseille : Fiche 1 -->
+              <article class="PropositionHebergementRecommandeFicheR">
+                <a href="#" class="PropositionHebergementRecommandeFicheLienR">
+                  <div class="PropositionHebergementRecommandeFicheImgR">
+                    <img class="PropositionHebergementRecommandeFicheImgImageR" src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                  </div>
+                 <div class="PropositionHebergementRecommandeFicheInfosR">
+                    <h3 class="PropositionHebergementRecommandeFicheInfosRTitre">Auberge la Cannebière</h3>
+                    <p class="PropositionHebergementRecommandeFicheInfosRPrix">Nuit à partir de <strong>25€</strong></p>
+                    <div class="PropositionHebergementRecommandeFicheInfosRNote">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="etoilegrise fas fa-star"></i>
+                   </div>
+                  </div>
+                </a>
+              </article>
+              <!-- Section: proposition d'hébergement : caroussel d'hébergement à Marseille : Fiche 2 -->
+              <article class="PropositionHebergementRecommandeFicheR">
+                <a href="#" class="PropositionHebergementRecommandeFicheLienR">
+                  <div class="PropositionHebergementRecommandeFicheImgR">
+                    <img class="PropositionHebergementRecommandeFicheImgImageR" src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                  </div>
+                  <div class="PropositionHebergementRecommandeFicheInfosR">
+                    <h3 class="PropositionHebergementRecommandeFicheInfosRTitre">Hôtel du port</h3>
+                    <p class="PropositionHebergementRecommandeFicheInfosRPrix">Nuit à partir de <strong>52€</strong></p>
+                    <div class="PropositionHebergementRecommandeFicheInfosRNote">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <!-- Section: proposition d'hébergement : caroussel d'hébergement à Marseille : Fiche 3 -->
+              <article class="PropositionHebergementRecommandeFicheR">
+                <a href="#" class="PropositionHebergementRecommandeFicheLienR">
+                  <div class="PropositionHebergementRecommandeFicheImgR">
+                    <img class="PropositionHebergementRecommandeFicheImgImageR" src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                  </div>
+                  <div class="PropositionHebergementRecommandeFicheInfosR">
+                    <h3 class="PropositionHebergementRecommandeFicheInfosRTitre">Hôtel Les mouettes</h3>
+                    <p class="PropositionHebergementRecommandeFicheInfosRPrix">Nuit à partir de <strong>76€</strong></p>
+                    <div class="PropositionHebergementRecommandeFicheInfosRNote">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="etoilegrise fas fa-star"></i>
+                  </div>
+                  </div>
+                </a>
+              </article>
+              <!-- Section: proposition d'hébergement : caroussel d'hébergement à Marseille : Fiche 4 -->
+              <article class="PropositionHebergementRecommandeFicheR">
+                <a href="#" class="PropositionHebergementRecommandeFicheLienR">
+                  <div class="PropositionHebergementRecommandeFicheImgR">
+                    <img class="PropositionHebergementRecommandeFicheImgImageR" src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                  </div>
+                  <div class="PropositionHebergementRecommandeFicheInfosR">
+                    <h3 class="PropositionHebergementRecommandeFicheInfosRTitre">Auberge de la mer</h3>
+                    <p class="PropositionHebergementRecommandeFicheInfosRPrix">Nuit à partir de <strong>46€</strong></p>
+                    <div class="PropositionHebergementRecommandeFicheInfosRNote">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="etoilegrise fas fa-star"></i>
+                      <i class="etoilegrise fas fa-star"></i>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <!-- Section: proposition d'hébergement : caroussel d'hébergement à Marseille : Fiche 5 -->
+              <article class="PropositionHebergementRecommandeFicheR">
+                <a href="#" class="PropositionHebergementRecommandeFicheLienR">
+                  <div class="PropositionHebergementRecommandeFicheImgR">
+                    <img class="PropositionHebergementRecommandeFicheImgImageR" src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                  </div>
+                  <div class="PropositionHebergementRecommandeFicheInfosR">
+                    <h3 class="PropositionHebergementRecommandeFicheInfosRTitre">Auberge Le Panier</h3>
+                    <p class="PropositionHebergementRecommandeFicheInfosRPrix">Nuit à partir de <strong>23€</strong></p>
+                    <div class="PropositionHebergementRecommandeFicheInfosRNote">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="etoilegrise fas fa-star"></i>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <!-- Section: proposition d'hébergement : caroussel d'hébergement à Marseille : Fiche 6 -->
+              <article class="PropositionHebergementRecommandeFicheR">
+                <a href="#" class="PropositionHebergementRecommandeFicheLienR">
+                  <div class="PropositionHebergementRecommandeFicheImgR">
+                    <img class="PropositionHebergementRecommandeFicheImgImageR" src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hébergement Marcus Loke, photo de la chambre">
+                  </div>
+                  <div class="PropositionHebergementRecommandeFicheInfosR">
+                    <h3 class="PropositionHebergementRecommandeFicheInfosRTitre">Hôtel chez Amina</h3>
+                    <p class="PropositionHebergementRecommandeFicheInfosRPrix">Nuit à partir de <strong>96€</strong></p>
+                    <div class="PropositionHebergementRecommandeFicheInfosRNote">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              </div>
+            <div class="PropositionHebergementRecommandePlus">
+              <a href="#">Afficher plus</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: activités à Marseille -->
+        <section class="PropositionActivites" id="PropositionActivites">
+          <div>
+            <h2>Activités à Marseille</h2>
+          </div>
+          <div class="PropositionActivitesListe">
+          <!-- Bloc 1/4 -->
+          <!-- Section: activités à Marseille : Fiche 1 -->
+          <div class="PropositionActivitesColumn">
+           <div class="PropositionActivitesFiche">
+              <a class="PropositionActivitesFicheLien" href="#">
+                <div class="PropositionActivitesFicheImgG">
+                  <img class="PropositionActivitesFicheImgImage" src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du vieux Port de Marseille">
+                </div>
+                <div class="PropositionActivitesFicheLienTitre">
+                  <h3>Vieux Port</h3>
+                </div>
+              </a>
+              </div>
+            </div>
+            <!-- Bloc 2/4 -->
+            <div class="PropositionActivitesColumn">
+              <!-- Section: activités à Marseille : Fiche 2 -->
+              <div class="PropositionActivitesFiche">
+                <a class="PropositionActivitesFicheLien" href="#">
+                  <div class="PropositionActivitesFicheImg">
+                    <img class="PropositionActivitesFicheImgImage" src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du vieux Port de Marseille">
+                  </div>
+                  <div class="PropositionActivitesFicheLienTitre">
+                    <h3>Fort de Pomègues</h3>
+                  </div>
+                </a>
+              </div>
+              <!-- Section: activités à Marseille : Fiche 3 -->
+              <div class="PropositionActivitesFiche">
+                <a class="PropositionActivitesFicheLien" href="#">
+                  <div class="PropositionActivitesFicheImg">
+                    <img class="PropositionActivitesFicheImgImage" src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo du vieux Port de Marseille">
+                  </div>
+                  <div class="PropositionActivitesFicheLienTitre">
+                    <h3>Îles du Frioul</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Bloc 3/4 -->
+            <!-- Section: activités à Marseille : Fiche 4 -->
+            <div class="PropositionActivitesColumn">
+              <div class="PropositionActivitesFiche">
+                <a class="PropositionActivitesFicheLien" href="#">
+                  <div class="PropositionActivitesFicheImgG">
+                    <img class="PropositionActivitesFicheImgImage" src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du vieux Port de Marseille">
+                  </div>
+                  <div class="PropositionActivitesFicheLienTitre">
+                    <h3>Parc National des Calanques</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Bloc 4/4 -->
+            <div class="PropositionActivitesColumn">
+              <!-- Section: activités à Marseille : Fiche 5 -->
+              <div class="PropositionActivitesFiche">
+                <a class="PropositionActivitesFicheLien" href="#">
+                  <div class="PropositionActivitesFicheImg">
+                    <img class="PropositionActivitesFicheImgImage" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo du vieux Port de Marseille">
+                  </div>
+                  <div class="PropositionActivitesFicheLienTitre">
+                    <h3>Notre-Dame-de-la-Garde</h3>
+                    </div>
+                </a>
+              </div>
+              <!-- Section: activités à Marseille : Fiche 6 -->
+              <div class="PropositionActivitesFiche">
+                <a class="PropositionActivitesFicheLien" href="#">
+                  <div class="PropositionActivitesFicheImg">
+                    <img class="PropositionActivitesFicheImgImage" src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du vieux Port de Marseille">
+                   </div>
+                 <div class="PropositionActivitesFicheLienTitre">
+                   <h3>Parc Longchamp</h3>
+                 </div>
+               </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Section : Pied de la page -->
+      <footer class="footer">
+        <!-- Section : pied de la page : A propos -->
+        <div class="footerElement">
+          <p class="footerElementTitre">A propos</p>
+          <a href="#" class="footerElementLien">Fonctionnement du site</a>
+          <a href="#" class="footerElementLien">Conditions générales de vente</a>
+          <a href="#" class="footerElementLien">Données et confidentialités</a>
+        </div>
+        <!-- Section : pied de la page : Nos hébergement -->
+        <div class="footerElement">
+          <p class="footerElementTitre">Nos hébergement</p>
+          <a href="#" class="footerElementLien">Charte qualité</a>
+          <a href="#" class="footerElementLien">Soumettre votre hotel</a>
+        </div>
+        <!-- Section : pied de la page : Assistance -->
+        <div class="footerElement">
+          <p class="footerElementTitre">Assistance</p>
+          <a href="#" class="footerElementLien">Centre d'aide</a>
+          <a href="#" class="footerElementLien">Nous contacter</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

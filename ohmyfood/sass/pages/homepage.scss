@@ -1,0 +1,172 @@
+/*homepage*/
+/*
+pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
+Vous utilisez des boutons dans tout votre site, en revanche votre page d’accueil comporte 
+une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
+En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs ;
+*/
+
+.localisation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: #E8E8E8;
+    font-size: 0.75rem;
+    color: #444444;
+}
+.fas{
+    margin-right: 10px;
+    font-size: 1.1rem;
+    color: #444444;
+}
+
+.hero{
+    padding: 2rem 2rem 4rem 2rem;
+    text-align: center;
+    background-color: #f1f1f1;
+
+    &__subtitle{
+        font-weight: 300;
+        margin: 1rem 0rem 2rem 0rem;
+    }
+
+    &__button{
+        @include button($color-primary);
+    }
+}
+
+.fonctionnement{
+    padding: 1rem 1rem 3rem 1rem;
+
+    &__title{
+        margin: 2rem 0;
+    }
+
+    &__liste{
+        margin: 0;
+        padding: 0;
+
+    }
+
+    &__item{
+        display: flex;
+        padding: 1.5rem;
+        margin: 1rem 0 1rem 0.75rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+        border-radius: 1.25rem;
+        background-color: #F6F6F6;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+            background-color: lighten($color-primary, 35%);
+        }
+    }
+
+    &__chiffre{
+        background-color: $color-primary;
+        color: white;
+        border-radius: 2rem;
+        margin-left: -2.5rem;
+        margin-right: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__picto{
+        margin-right: 1rem;
+        color: grey;
+        font-size: 1.2rem;
+    }
+}
+
+.restaurants{
+    background-color: #F6F6F6;
+    padding: 1rem 1rem 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    &__title{
+        margin: 2rem 0 0 0;
+    }
+}
+.carte{
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    
+    &__img{
+        height: 12rem;
+        width: 100%;
+        border: transparent solid 0px;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: none;
+        object-fit: cover;
+    }
+
+    &__nouveau{
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 50%);
+        padding: 0.5rem;
+        border-radius: 0.125rem;
+        position: absolute;
+        top: 1rem;
+        right: 0.75rem;
+    }
+
+    &__footer{
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__informations{
+        flex: 1;
+    }
+
+    &__boutton{
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        cursor: pointer;
+
+        &:active{
+            .fa-heart::before {
+                content: "\f004";
+                font-weight: bold;
+            }
+            .fa-heart:hover::before{
+                transition-duration: 1s;
+                color: #ab56dc;
+            }
+        }
+    }
+
+    &:hover{
+        box-shadow: 0.25rem 0.25rem 5px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main{
+        max-width: 768px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "clementvernon_3_13092021",
+  "version": "1.0.0",
+  "description": "Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClementVernon/ClementVernon_3_13092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClementVernon/ClementVernon_3_13092021/issues"
+  },
+  "homepage": "https://github.com/ClementVernon/ClementVernon_3_13092021#readme"
+}

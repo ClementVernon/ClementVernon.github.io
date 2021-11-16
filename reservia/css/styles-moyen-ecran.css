@@ -1,0 +1,442 @@
+body
+{
+    font-family: 'Raleway', sans-serif; /* Police d'écriture */
+    margin: 0; /* Pour supprimer la marge défini de base */
+}
+main
+{
+    padding: 0 3em;
+}
+/** Gestion du Menu **/
+header
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* centré les éléments (en hauteur ici) */
+}
+header img
+{
+    height: 50px; /* redimentionne la hauteur */
+    padding-left: 1.5rem;
+    margin-right: 5em;
+}
+.headerImage
+{
+    margin-right: 35%;
+}
+a
+{
+    text-decoration: none; /* retire le soulignement */
+    color: #000000; /* texte en noir */
+}
+a:visited
+{
+    text-decoration: none; /* retire le soulignement */
+    color: #000000; /* texte en noir */
+}
+a.headerInscription
+{
+    color: #0065FC; /* Couleur de la font du bouton inscription */
+    font-weight: bold;  /* Mise en gras de la font du bouton inscription */
+    margin: 0 2em;
+}
+nav
+{
+    display: flex;
+}
+
+.headerLien
+{
+    padding: 2.5em;
+    border-top: 3px solid #0065FC;
+    width: 50%;  /* prends la moitier de la largeur */
+}
+.headerLienInactif
+{
+    padding: 2.5em; 
+    border-top: 3px solid #f2f2f200;
+    width: 50%; /*  prends la moitier de la largeur*/
+}
+a.headerLien
+{
+    color: #0065FC;
+}
+
+/** Gestion de la Section: Rechercher un hébergement **/
+.RechercheHerbergement
+{
+    padding: 0 1.3em;
+}
+/* Titre */
+.RechercheHerbergementTitreH1
+{
+    font-size: 1.4em;
+    margin-block-end: 0em;
+}
+/* Barre */
+.RechercheHerbergementBarre
+{
+    display: flex;
+    margin: 2em 0;
+}
+.RechercheHerbergementBarreIcon
+{
+    background-color: #F2F2F2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding: 1em 1.2em;
+}
+.fa-map-marker
+{
+    font-size: 1.1em;
+}
+input[type="search"]   /* Champs recherche de l'input */
+{
+    border: 1px solid #F2F2F2;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+    padding-left: 1.5em;
+}
+.fa-search:before
+{
+    display: none;
+}
+input[type="submit"]   /* Champs recherche de l'input */
+{
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+.RechercheHerbergementBarreButton
+{
+    background-color: #0065FC;
+    color: white;
+    border: transparent;
+    padding: 0 1.1em;
+    border-top-right-radius : 1em;
+    border-bottom-right-radius : 1em;
+    font-size: 1rem;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+/* Filtres */
+.RechercheHerbergementFiltres
+{
+    display: flex;
+    margin-top: 2em;
+    flex-wrap: nowrap;  /* Met les éléments les uns à la suite des autres */
+}
+.RechercheHerbergementFiltresE
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.RechercheHerbergementFiltres i
+{
+    color: #0065FC;
+}
+.RechercheHerbergementFiltresElement
+{
+    display: flex;
+    align-items: center;
+    border: 1px solid #F2F2F2;
+    border-radius: 2em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+}
+.RechercheHerbergementFiltresElement:hover
+{
+    background-color: #F2F2F2;
+}
+.RechercheHerbergementFiltresTitre
+{
+    font-size: 1.2em;
+    margin: 0 2rem 1rem 0;
+}
+.RechercheHerbergementFiltresTitre p
+{
+    margin-block-start: 0.5em;
+    margin-block-end: 0px;
+    font-weight: bold;
+}
+.RechercheHerbergementFiltresIcon
+{
+    background-color: #DEEBFF;
+    padding: 1em;
+    border-radius: 2em;
+}
+.RechercheHerbergementFiltresFiltre
+{
+    font-weight: bold;
+}
+.RechercheHerbergementFiltresFiltre p
+{
+    margin: 0em 0.8em 0em 0.8em;
+}
+/* Informations */
+.RechercheHerbergementInfos
+{
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0 1em 0;
+}
+.RechercheHerbergementInfosIcon
+{
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    border: 1px #F2F2F2 solid;
+    border-radius: 2em;
+    font-size: 0.8em;
+}
+.RechercheHerbergementInfosText
+{
+    padding: 0 0 0 0.5em;
+}
+.RechercheHerbergementInfos i
+{
+    color: #0065FC; /* Bleu */
+}
+
+
+/***  Gestion des propositions d'hébergements ***/
+.PropositionHebergement
+{
+    display: flex;
+}
+/** Gestion de la Section : Hébergement Populaire **/
+/* Conteneur */
+.PropositionHebergementPopulaire
+{
+    background-color: #F2F2F2;  /* Gris de fond */
+    padding: 0.5em 1.3em;
+    order: 2;
+    width: 30%;
+    border-radius: 1em;
+    margin-left: 2em;
+}
+.PropositionHebergementPopulaireTexte
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-chart-line
+{
+    font-size: 1.5em;
+}
+/* Images */
+.PropositionHebergementRecommandeFicheImg
+{
+    position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-height: 33%;
+    max-width: 33%;
+}
+.PropositionHebergementRecommandeFicheImgImage
+{
+    border-radius: 1em 0 0 1em;
+    width: 100%;
+    height: 100%;
+}
+/** Gestion de la Section : Proposition d'hébergement : Caroussel d'hébergement à Marseille **/
+.PropositionHebergementRecommande
+{
+    padding: 0.5em 1.3em;
+    border-radius: 1em;
+    width: 70%;
+    background-color: #F2F2F2;
+    display: inline;
+}
+.PropositionHebergementRecommandeF
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Images */
+.PropositionHebergementRecommandeFicheImgP
+{
+    min-height: 100%;
+    width: 40%;
+    min-width: 40%;
+    max-width: 40%;
+}
+.PropositionHebergementRecommandeFicheR
+{
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    padding: 0.3rem;
+    box-shadow: 0 0 16px #F2F2F2;
+    width: 30%;
+}
+.PropositionHebergementRecommandeFicheInfosRTitre
+{
+    margin: 0.25rem 0.75rem 0 0.75rem;
+    font-size: 00.8em;
+}
+.PropositionHebergementRecommandeFicheInfosRPrix
+{
+    margin: 0.25rem 0.75rem 0 0.75rem;
+    font-size: 0.6em;
+}
+.PropositionHebergementRecommandeFicheInfosRNote
+{
+    margin: 0.25rem 0.75rem 0 0.75rem;
+    font-size: 0.5em;
+    padding-bottom: 0.3em;
+}
+.etoilegrise.fas.fa-star
+{
+    color: #d6d6d6;
+}
+.PropositionHebergementRecommandePlus
+{
+    margin: 0.5em 0;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.PropositionHebergementRecommandeFicheP
+{
+    background-color: white;
+    border-radius: 1em;
+    margin-bottom: 0.7em;
+    padding: 0.3em 0 0 0.3em;
+    box-shadow: 0px 0px 16px #c7c7c7;
+}
+.PropositionHebergementRecommandeFicheImgImageP
+{
+    border-radius: 0.8rem 0 0 0.8rem;
+    width: 100%;
+    height: 7rem;
+    object-fit: cover; /* Met a dimension l'image pour dans l'encart parent */
+}
+.PropositionHebergementRecommandeFicheLienP
+{
+    display: flex;
+    overflow: auto; /* scrall bar si besoin */
+    max-height: 8rem;
+}
+.PropositionHebergementRecommandeFicheImgR
+{
+    position: relative;
+    height: 7rem;
+}
+.PropositionHebergementRecommandeFicheImgImageR
+{
+    border-radius: 1em 1em 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.PropositionHebergementRecommandeFicheInfosP
+{
+    padding: 0.3em;
+}
+.PropositionHebergementRecommandeFicheInfosPTitle
+{
+    margin: 0.3rem 0.8rem 0 0.8rem;
+    font-size: 0.8em;
+}
+.PropositionHebergementRecommandeFicheInfosPPrix
+{
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+    font-size: 0.6em;
+}
+.PropositionHebergementRecommandeFicheInfosPNote
+{
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+    font-size: 0.7em;
+    margin-top: 3em;
+}
+.fa-star
+{
+    color: #0065FC;
+}
+
+
+
+/** Gestion de la Section : Activités à Marseille **/ 
+/* Conteneur */
+.PropositionActivites
+{
+    margin-bottom: 2em;
+    padding: 0.5em 0;
+}
+.PropositionActivitesListe
+{
+   display: flex;
+   flex-wrap: wrap;
+}
+.PropositionActivitesColumn
+{
+    max-width: 23%;
+    min-width: 23%;
+    margin-right: 2%;
+}
+/* Lien */
+.PropositionActivitesFiche
+{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px #F2F2F2;
+    border-radius: 1em;
+    margin: 1em 0;
+}
+/* Images */
+.PropositionActivitesFicheImg
+{
+    position: relative;
+    height: 10.3em;
+}
+.PropositionActivitesFicheImgG
+{
+    height: 25rem;
+}
+.PropositionActivitesFicheImgImage
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    object-fit: cover;
+}
+/* Titre */
+.PropositionActivitesFicheLienTitre
+{
+    margin: 0em 1em;
+    font-size: 0.9em;
+}
+
+
+/** Gestion du footer **/
+footer
+{
+    background-color: #F2F2F2;
+    padding: 2rem 3rem;
+    display: flex;
+}
+.footerElement
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-right: auto;
+}
+.footerElement a
+{
+    margin: 0.5rem 0;
+}
+.footerElementTitre
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}

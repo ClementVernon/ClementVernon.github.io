@@ -1,0 +1,186 @@
+.header{
+    
+    &__retour{
+        position: relative;
+        display: block;
+        position: relative;
+        color: red;
+    }
+
+    &__picto{
+        position: absolute;
+        top: 0.4rem;
+        right: 2rem;
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    &__logo{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.heroRestaurant{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;  /* a tester*/
+}
+
+.menu{
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f3f3f3;
+    z-index: 1; /* détermine l'ordre des différentes couches lorsque des éléments se chevauchent */
+    position: relative;
+
+    &__header{
+        padding: 1rem 2rem 0 1rem;
+        display: flex;
+        align-items:  center;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-family: 'Shrikhand', cursive;
+    }
+
+    &__button{
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent 0px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:active{
+            .fa-heart::before {
+                content: "\f004";
+                font-weight: bold;
+            }
+            .fa-heart:hover::before{
+                transition-duration: 1s;
+                color: #ab56dc;
+            }
+        }
+    }
+
+    &__picto{
+        font-size: 1.75rem;
+    }
+}
+
+.sousmenu{
+    padding: 0 1rem;
+
+    &__title{
+        margin-top: 2rem;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+        font-weight: normal;
+        font-size: 1rem;
+        color: #6d6d6d;
+    }
+    &__line{
+        width: 2.5rem;
+        height: 0.25rem;
+        background-color: $color-tertiary;
+    }
+}
+
+
+.element{
+    background-color: white;
+    padding: 0.75rem;
+    display: flex;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* etat de base de l'élément : invisible */
+    cursor: pointer;
+    @include element;
+
+    /* Effet cascade d'apparition des élements du menu */
+    &--1{
+        animation-delay: 218ms;
+    }
+
+    &--2{
+        animation-delay: 347ms;
+    }
+
+    &--3{
+        animation-delay: 470ms;
+    }
+
+    &--4{
+        animation-delay: 613ms;
+    }
+
+    &__header{
+        flex: 1; /* permet d'utiliser l'ensemble de l'espace disponible dans le conteneur */
+        white-space: nowrap; /* le texte ne revient pas à la ligne */
+        text-overflow: ellipsis; /* stylise le texte */
+        overflow: hidden; /* masque le texte en trop */
+    }
+
+    &__subtitle{
+        color: #6d6d6d;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+    }
+
+    &__prix{
+        font-weight: bold;
+        color: #464646;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &__confirmation{
+        background-color: $color-tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s; /* transition */
+    }
+
+    &:hover{
+        box-shadow: 0.25rem 0.25rem 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active &__confirmation{
+        margin-right: -1rem;
+    }
+
+    &__picto{
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+.commander{
+    
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0 6rem 0;
+    color: white;
+}
+
+.commandebtn{
+    @include button($color-primary);
+}
+
+@media screen and (min-width: 768px) {
+    main{
+        max-width: 768px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,496 @@
+@charset "UTF-8";
+/*Base*/
+/*
+le directory base/ contient les fichiers qui définissent les fondations de votre site, 
+par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site, 
+telles que le box-sizing ;
+*/
+body, html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.fond {
+  animation-name: fondu;
+  animation-duration: 3100ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#préchargement {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+#préchargement #animation {
+  width: 100px;
+  height: 100px;
+  border: 20px solid #cccccc;
+  border-radius: 50%;
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+  position: absolute;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    border-top: 20px solid #FF79DA;
+    opacity: 1;
+  }
+  39% {
+    transform: rotate(180deg);
+    border-top: 20px solid #FF79DA;
+    opacity: 0.61;
+  }
+  79% {
+    transform: rotate(270deg);
+    border-top: 20px solid #FF79DA;
+    opacity: 0.21;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top: 20px solid #FF79DA;
+    opacity: 0;
+  }
+}
+.header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.301);
+}
+
+footer {
+  background-color: #353535;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  max-width: 100%;
+  min-width: 300px;
+}
+footer .lien {
+  color: white;
+  display: flex;
+  margin: 0.25rem 0;
+}
+footer .lien i {
+  color: white;
+}
+footer .lien img {
+  height: 1.5rem;
+  margin: 1rem 0;
+}
+
+/*variable*/
+/*
+Dans utils/, vous rangez vos variables, fonctions, mixins et les  %placeholders 
+pour les extensions (si vous en utilisez) ;
+*/
+/*Components*/
+/*
+Components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons.
+Alors que les layouts peuvent utiliser d’autres composants pour générer leurs contenus, 
+les composants, eux, sont plus élémentaires. Par exemple, un formulaire doit être considéré 
+comme un layout : la mise en page est une fonction vitale du bloc et il utilise d’autres blocs 
+pour fonctionner,  comme des boutons. En revanche, le bouton lui-même est un composant car 
+il n’a besoin d’aucun autre composant pour remplir sa fonction ;
+*/
+/*homepage*/
+/*
+pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
+Vous utilisez des boutons dans tout votre site, en revanche votre page d’accueil comporte 
+une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
+En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs ;
+*/
+.localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #E8E8E8;
+  font-size: 0.75rem;
+  color: #444444;
+}
+
+.fas {
+  margin-right: 10px;
+  font-size: 1.1rem;
+  color: #444444;
+}
+
+.hero {
+  padding: 2rem 2rem 4rem 2rem;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.hero__subtitle {
+  font-weight: 300;
+  margin: 1rem 0rem 2rem 0rem;
+}
+.hero__button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.301);
+  color: white;
+  border: transparent 0px solid;
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+.hero__button:hover {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
+}
+
+.fonctionnement {
+  padding: 1rem 1rem 3rem 1rem;
+}
+.fonctionnement__title {
+  margin: 2rem 0;
+}
+.fonctionnement__liste {
+  margin: 0;
+  padding: 0;
+}
+.fonctionnement__item {
+  display: flex;
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #F6F6F6;
+  display: flex;
+  align-items: center;
+}
+.fonctionnement__item:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement__chiffre {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 2rem;
+  margin-left: -2.5rem;
+  margin-right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fonctionnement__picto {
+  margin-right: 1rem;
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 1rem 1rem 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.restaurants__title {
+  margin: 2rem 0 0 0;
+}
+
+.carte {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.carte__img {
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.carte__nouveau {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.carte__footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.carte__informations {
+  flex: 1;
+}
+.carte__boutton {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.carte__boutton:active .fa-heart::before {
+  content: "\f004";
+  font-weight: bold;
+}
+.carte__boutton:active .fa-heart:hover::before {
+  transition-duration: 1s;
+  color: #ab56dc;
+}
+.carte:hover {
+  box-shadow: 0.25rem 0.25rem 5px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+.header__retour {
+  position: relative;
+  display: block;
+  position: relative;
+  color: red;
+}
+.header__picto {
+  position: absolute;
+  top: 0.4rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  color: black;
+}
+.header__logo {
+  align-items: center;
+  justify-content: center;
+}
+
+.heroRestaurant {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+  /* a tester*/
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f3f3f3;
+  z-index: 1;
+  /* détermine l'ordre des différentes couches lorsque des éléments se chevauchent */
+  position: relative;
+}
+.menu__header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  font-family: "Shrikhand", cursive;
+}
+.menu__button {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__button:active .fa-heart::before {
+  content: "\f004";
+  font-weight: bold;
+}
+.menu__button:active .fa-heart:hover::before {
+  transition-duration: 1s;
+  color: #ab56dc;
+}
+.menu__picto {
+  font-size: 1.75rem;
+}
+
+.sousmenu {
+  padding: 0 1rem;
+}
+.sousmenu__title {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #6d6d6d;
+}
+.sousmenu__line {
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+}
+
+.element {
+  background-color: white;
+  padding: 0.75rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* etat de base de l'élément : invisible */
+  cursor: pointer;
+  animation-name: apparition;
+  animation-duration: 800ms;
+  animation-fill-mode: backwards;
+  /* Effet cascade d'apparition des élements du menu */
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.element--1 {
+  animation-delay: 218ms;
+}
+.element--2 {
+  animation-delay: 347ms;
+}
+.element--3 {
+  animation-delay: 470ms;
+}
+.element--4 {
+  animation-delay: 613ms;
+}
+.element__header {
+  flex: 1;
+  /* permet d'utiliser l'ensemble de l'espace disponible dans le conteneur */
+  white-space: nowrap;
+  /* le texte ne revient pas à la ligne */
+  text-overflow: ellipsis;
+  /* stylise le texte */
+  overflow: hidden;
+  /* masque le texte en trop */
+}
+.element__subtitle {
+  color: #6d6d6d;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.element__prix {
+  font-weight: bold;
+  color: #464646;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.element__confirmation {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  /* transition */
+}
+.element:hover {
+  box-shadow: 0.25rem 0.25rem 5px rgba(0, 0, 0, 0.25);
+}
+.element:active .element__confirmation {
+  margin-right: -1rem;
+}
+.element__picto {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.commander {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0 6rem 0;
+  color: white;
+}
+
+.commandebtn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.301);
+  color: white;
+  border: transparent 0px solid;
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+.commandebtn:hover {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+/*vendors*/
+/*
+vendors/ est un directory pour des feuilles de style externes comme Bootstrap ou jQuery UI. 
+En gros, il s’utilise pour tout CSS venant de l’extérieur. Utiliser des frameworks comme Bootstrap 
+permet d’accélérer le développement d’un site, car ils contiennent des feuilles de style prédéfinies 
+pour des choses comme les formulaires ou des boutons.
+*/
+
+/*# sourceMappingURL=style.css.map */

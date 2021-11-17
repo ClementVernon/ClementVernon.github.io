@@ -7,13 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-a,
-button {
-    transition: all .3s ease-in-out;
-    outline: none!important;
-}
-
-a:hover {
+a {
     text-decoration: none;
     cursor: pointer;
 }
@@ -302,7 +296,7 @@ a:hover {
 }
 
 .navbar-brand img {
-    max-height: 200px;
+    max-height: 50px;
     margin: 0 5px 0 0;
     display: inline;
 }
@@ -677,7 +671,15 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 16px;
+}
+
+.italic
+{
+    font-style: italic;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .tight-width-whitespace {
@@ -775,16 +777,16 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #ffffff!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #f17f4a;
     color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
+    background: #bd5323!important;
     color: #FFFFFF!important;
 }
 
@@ -962,7 +964,6 @@ h4 {
         box-shadow: none;
     }
     .navbar-brand img {
-        max-height: 40px;
         width: auto;
     }
     .nav-invert .navbar-header {

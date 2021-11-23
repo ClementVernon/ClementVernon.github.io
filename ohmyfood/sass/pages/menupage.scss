@@ -177,10 +177,3 @@
 .commandebtn{
     @include button($color-primary);
 }
-
-@media screen and (min-width: 768px) {
-    main{
-        max-width: 768px;
-        margin: auto;
-    }
-}

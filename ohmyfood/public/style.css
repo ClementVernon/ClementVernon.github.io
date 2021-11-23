@@ -5,7 +5,7 @@ le directory base/ contient les fichiers qui définissent les fondations de votr
 par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site, 
 telles que le box-sizing ;
 */
-body, html {
+body, html, p {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -15,8 +15,9 @@ a {
   color: white;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-family: "Shrikhand", cursive;
 }
 
 .fond {
@@ -286,9 +287,19 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 }
 
 @media screen and (min-width: 768px) {
-  main {
-    max-width: 768px;
-    margin: auto;
+  .correction {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .carte {
+    width: 45%;
+    margin: 10px auto;
+  }
+
+  .fonctionnement__liste {
+    width: 30%;
+    margin: 10px auto;
   }
 }
 .header__retour {
@@ -479,12 +490,6 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    max-width: 768px;
-    margin: auto;
-  }
-}
 /*vendors*/
 /*
 vendors/ est un directory pour des feuilles de style externes comme Bootstrap ou jQuery UI. 

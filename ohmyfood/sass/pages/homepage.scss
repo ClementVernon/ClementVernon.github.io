@@ -165,8 +165,20 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 }
 
 @media screen and (min-width: 768px) {
-    main{
-        max-width: 768px;
-        margin: auto;
+
+    .correction{
+        display: flex;
+        flex-wrap: wrap;
     }
+
+    .carte{
+        width: 45%;
+        margin: 10px auto;
+    }
+
+    .fonctionnement__liste{
+        width: 30%;
+        margin: 10px auto;
+    }
+
 }
